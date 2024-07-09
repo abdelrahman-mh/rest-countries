@@ -3,12 +3,13 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": ".",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "biome check --write --unsafe --no-errors-on-unmatched --files-ignore-unknown=true ./src",
     "preview": "vite preview",
-    "deploy": "gh-pages -d dist"
+    "deploy": "rm -rf ./dist && pnpm run build && gh-pages -d dist"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.8.2",
