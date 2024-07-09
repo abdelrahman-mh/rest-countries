@@ -8,8 +8,7 @@ import { StrictMode } from "react"
 import theme from "./theme"
 
 const queryClient = new QueryClient()
-
-const router = createRouter({ routeTree })
+const router = createRouter({ routeTree, basepath: "/rest-countries/" })
 declare module "@tanstack/react-router" {
   interface Register {
     router: typeof router
